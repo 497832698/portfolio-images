@@ -905,56 +905,57 @@
 
   const BASE = 'https://raw.githubusercontent.com/497832698/portfolio-images/main/img';
   const WORKS_DATA = {
-      haierwang: [
-      { name: '详情设计', desc: '鳕鱼肠详情设计', 'img': 'haier-1.jpg', 'detailImg': 'haier-detail-1.jpg', rating: 5, tags: ['详情页', '食品'] },
-      { name: '详情设计', desc: '猪肉脆详情设计', 'img': 'haier-2.jpg', 'detailImg': 'haier-detail-2.jpg', rating: 4.8, tags: ['详情页', '食品'] },
-      { name: '详情设计', desc: '水杯详情设计', 'img': 'haier-3.jpg', 'detailImg': 'haier-detail-3.jpg', rating: 5, tags: ['详情页', '用品'] },
-      { name: '详情设计', desc: '保温拎拎壶详情', 'img': 'haier-4.jpg', 'detailImg': 'haier-detail-4.jpg', rating: 5, tags: ['详情页', '用品'] },
-      { name: '详情设计', desc: '牛奶棒详情设计', 'img': 'haier-5.jpg', 'detailImg': 'haier-detail-5.jpg', rating: 4.5, tags: ['详情页', '食品'] },
-      { name: '详情设计', desc: '巴旦木详情设计', 'img': 'haier-6.jpg', 'detailImg': 'haier-detail-6.jpg', rating: 4.5, tags: ['详情页', '食品'] },
-      { name: '详情设计', desc: '可蒂家婴幼儿保湿纸', 'img': 'haier-8.jpg', 'detailImg': 'haier-detail-8.jpg', rating: 4.8, tags: ['详情页', '用品'] },
-      { name: '详情设计', desc: '幼蓓护手霜套装', 'img': 'haier-9.jpg', 'detailImg': 'haier-detail-9.jpg', rating: 5, tags: ['详情页', '用品'] },
-      { name: '详情设计', desc: '牛肉干详情', 'img': 'haier-10.jpg', 'detailImg': 'haier-detail-10.jpg', rating: 4.8, tags: ['详情页', '食品'] },
-      { name: '详情设计', desc: '鹌鹑蛋', 'img': 'haier-11.jpg', 'detailImg': 'haier-detail-11.jpg', rating: 5, tags: ['详情页', '食品'] },
-      { name: '详情设计', desc: '爆米花', 'img': 'haier-12.jpg', 'detailImg': 'haier-detail-12.jpg', rating: 5, tags: ['详情页', '用品'] },
-      { name: '详情设计', desc: '便携奶瓶刷套装', 'img': 'haier-13.jpg', 'detailImg': 'haier-detail-13.jpg', rating: 5, tags: ['详情页', '用品'] },
-      { name: '详情设计', desc: '冻干苹果详情', 'img': 'haier-14.jpg', 'detailImg': 'haier-detail-14.jpg', rating: 4.9, tags: ['详情页', '食品'] },
-      { name: '详情设计', desc: '果汁甄选详情', 'img': 'haier-15.jpg', 'detailImg': 'haier-detail-15.jpg', rating: 5, tags: ['详情页', '食品'] },
-      { name: '详情设计', desc: '米饼详情', 'img': 'haier-16.jpg', 'detailImg': 'haier-detail-16.jpg', rating: 5, tags: ['详情页', '食品'] },
-      { name: '详情设计', desc: '伸缩衣架详情', 'img': 'haier-17.jpg', 'detailImg': 'haier-detail-17.jpg', rating: 4.8, tags: ['详情页', '用品'] },
-      { name: '详情设计', desc: '炭烧棒详情', 'img': 'haier-18.jpg', 'detailImg': 'haier-detail-18.jpg', rating: 5, tags: ['详情页', '用品'] },
-      { name: '详情设计', desc: '洗衣凝珠详情', 'img': 'haier-19.jpg', 'detailImg': 'haier-detail-19.jpg', rating: 5, tags: ['详情页', '用品'] },
-      { name: '详情设计', desc: '咸蛋黄锅巴详情', 'img': 'haier-20.jpg', 'detailImg': 'haier-detail-20.jpg', rating: 5, tags: ['详情页', '用品'] },
-      { name: '详情设计', desc: '幼蓓分食碗详情', 'img': 'haier-21.jpg', 'detailImg': 'haier-detail-21.jpg', rating: 5, tags: ['详情页', '用品'] },
-      { name: '详情设计', desc: '幼蓓叉勺详情', 'img': 'haier-22.jpg', 'detailImg': 'haier-detail-22.jpg', rating: 5, tags: ['详情页', '用品'] },
-      { name: '详情设计', desc: '幼蓓零食盒详情', 'img': 'haier-23.jpg', 'detailImg': 'haier-detail-23.jpg', rating: 5, tags: ['详情页', '用品'] },
-      { name: '详情设计', desc: '纸尿裤详情', 'img': 'haier-24.jpg', 'detailImg': 'haier-detail-24.jpg', rating: 5, tags: ['详情页', '用品'] },
-      { name: '电商设计', desc: 'kidswant洗护系列', 'img': 'haier-25.jpg', 'detailImg': 'haier-detail-25.jpg', rating: 5, tags: ['详情页', '用品'] },
-      { name: '电商设计', desc: '拎拎小墩桶', 'img': 'haier-26.jpg', 'detailImg': 'haier-detail-26.jpg', rating: 5, tags: ['详情页', '用品'] },
-      { name: '物料设计', desc: '微信长图春日出游', 'img': 'haier-27.jpg', 'detailImg': 'haier-detail-27.jpg', rating: 5, tags: ['线上物料'] },
-      { name: '物料设计', desc: '微信长图早春换季', 'img': 'haier-28.jpg', 'detailImg': 'haier-detail-28.jpg', rating: 5, tags: ['线上物料'] },
-      { name: '物料设计', desc: '微信长图吃出强壮', 'img': 'haier-29.jpg', 'detailImg': 'haier-detail-29.jpg', rating: 4.6, tags: ['线上物料'] },
-      { name: '电商设计', desc: '孩甄选电商二级页', 'img': 'haier-30.jpg', 'detailImg': 'haier-detail-30.jpg', rating: 4.9, tags: ['线上物料'] },
-      { name: '物料设计', desc: '微信长图生日礼', 'img': 'haier-31.jpg', 'detailImg': 'haier-detail-31.jpg', rating: 4.5, tags: ['线上物料'] },
-      { name: '物料设计', desc: '线下货架物料', 'img': 'haier-34.jpeg', 'detailImg': '20260417-201859', rating: 5, tags: ['陈列设计'] }
+    haierwang: [
+      { name: '详情设计', desc: '鳕鱼肠详情设计', img: 'haier-1.jpg', detailImg: 'haier-detail-1.jpg', rating: 5, tags: ['详情页', '食品'] },
+      { name: '详情设计', desc: '猪肉脆详情设计', img: 'haier-2.jpg', detailImg: 'haier-detail-2.jpg', rating: 4.8, tags: ['详情页', '食品'] },
+      { name: '详情设计', desc: '水杯详情设计', img: 'haier-3.jpg', detailImg: 'haier-detail-3.jpg', rating: 5, tags: ['详情页', '用品'] },
+      { name: '详情设计', desc: '保温拎拎壶详情', img: 'haier-4.jpg', detailImg: 'haier-detail-4.jpg', rating: 5, tags: ['详情页', '用品'] },
+      { name: '详情设计', desc: '牛奶棒详情设计', img: 'haier-5.jpg', detailImg: 'haier-detail-5.jpg', rating: 4.5, tags: ['详情页', '食品'] },
+      { name: '详情设计', desc: '巴旦木详情设计', img: 'haier-6.jpg', detailImg: 'haier-detail-6.jpg', rating: 4.5, tags: ['详情页', '食品'] },
+
+      { name: '详情设计', desc: '可蒂家婴幼儿保湿纸', img: 'haier-8.jpg', detailImg: 'haier-detail-8.jpg', rating: 4.8, tags: ['详情页', '用品'] },
+      { name: '详情设计', desc: '幼蓓护手霜套装', img: 'haier-9.jpg', detailImg: 'haier-detail-9.jpg', rating: 5, tags: ['详情页', '用品'] },
+      { name: '详情设计', desc: '牛肉干详情', img: 'haier-10.jpg', detailImg: 'haier-detail-10.jpg', rating: 4.8, tags: ['详情页', '食品'] },
+      { name: '详情设计', desc: '鹌鹑蛋', img: 'haier-11.jpg', detailImg: 'haier-detail-11.jpg', rating: 5, tags: ['详情页', '食品'] },
+      { name: '详情设计', desc: '爆米花', img: 'haier-12.jpg', detailImg: 'haier-detail-12.jpg', rating: 5, tags: ['详情页', '用品'] },
+      { name: '详情设计', desc: '便携奶瓶刷套装', img: 'haier-13.jpg', detailImg: 'haier-detail-13.jpg', rating: 5, tags: ['详情页', '用品'] },
+      { name: '详情设计', desc: '冻干苹果详情', img: 'haier-14.jpg', detailImg: 'haier-detail-14.jpg', rating: 4.9, tags: ['详情页', '食品'] },
+      { name: '详情设计', desc: '果汁甄选详情', img: 'haier-15.jpg', detailImg: 'haier-detail-15.jpg', rating: 5, tags: ['详情页', '食品'] },
+      { name: '详情设计', desc: '米饼详情', img: 'haier-16.jpg', detailImg: 'haier-detail-16.jpg', rating: 5, tags: ['详情页', '食品'] },
+      { name: '详情设计', desc: '伸缩衣架详情', img: 'haier-17.jpg', detailImg: 'haier-detail-17.jpg', rating: 4.8, tags: ['详情页', '用品'] },
+      { name: '详情设计', desc: '炭烧棒详情', img: 'haier-18.jpg', detailImg: 'haier-detail-18.jpg', rating: 5, tags: ['详情页', '用品'] },
+      { name: '详情设计', desc: '洗衣凝珠详情', img: 'haier-19.jpg', detailImg: 'haier-detail-19.jpg', rating: 5, tags: ['详情页', '用品'] },
+      { name: '详情设计', desc: '咸蛋黄锅巴详情', img: 'haier-20.jpg', detailImg: 'haier-detail-20.jpg', rating: 5, tags: ['详情页', '用品'] },
+      { name: '详情设计', desc: '幼蓓分食碗详情', img: 'haier-21.jpg', detailImg: 'haier-detail-21.jpg', rating: 5, tags: ['详情页', '用品'] },
+      { name: '详情设计', desc: '幼蓓叉勺详情', img: 'haier-22.jpg', detailImg: 'haier-detail-22.jpg', rating: 5, tags: ['详情页', '用品'] },
+      { name: '详情设计', desc: '幼蓓零食盒详情', img: 'haier-23.jpg', detailImg: 'haier-detail-23.jpg', rating: 5, tags: ['详情页', '用品'] },
+      { name: '详情设计', desc: '纸尿裤详情', img: 'haier-24.jpg', detailImg: 'haier-detail-24.jpg', rating: 5, tags: ['详情页', '用品'] },
+      { name: '详情设计', desc: 'kidswant洗护系列', img: 'haier-25.jpg', detailImg: 'haier-detail-25.jpg', rating: 5, tags: ['详情页', '用品'] },
+      { name: '详情设计', desc: '拎拎小墩桶', img: 'haier-26.jpg', detailImg: 'haier-detail-26.jpg', rating: 5, tags: ['详情页', '用品'] },
+      { name: '物料设计', desc: '微信长图春日出游', img: 'haier-27.jpg', detailImg: 'haier-detail-27.jpg', rating: 5, tags: ['线上物料'] },
+      { name: '物料设计', desc: '微信长图早春换季', img: 'haier-28.jpg', detailImg: 'haier-detail-28.jpg', rating: 5, tags: ['线上物料'] },
+      { name: '物料设计', desc: '微信长图吃出强壮', img: 'haier-29.jpg', detailImg: 'haier-detail-29.jpg', rating: 4.6, tags: ['线上物料'] },
+      { name: '电商设计', desc: '孩甄选电商二级页', img: 'haier-30.jpg', detailImg: 'haier-detail-30.jpg', rating: 4.9, tags: ['线上物料'] },
+      { name: '物料设计', desc: '微信长图生日礼', img: 'haier-31.jpg', detailImg: 'haier-detail-31.jpg', rating: 4.5, tags: ['线上物料'] },
+      { name: '物料设计', desc: '线下货架物料', img: 'haier-34.jpeg', detailImg: '20260417-201859', rating: 5, tags: ['陈列设计'] },
     ],
-      360: [
-      { name: '淘宝首页设计', desc: '360车品旗舰店首页设计', 'img': '360-1-v2.jpg', 'detailImg': '360-detail-1.jpg', rating: 5, tags: ['电商设计'] },
-      { name: '淘宝首页设计', desc: '360车品旗舰店首页设计2', 'img': '360-2-v2.jpg', 'detailImg': '360-detail-2.jpg', rating: 5, tags: ['电商设计'] },
-      { name: '发布会推广设计', desc: '安全智见发布会物料设计', 'img': '360-3-v2.jpg', 'detailImg': '360-detail-3.jpg', rating: 5, tags: ['品牌视觉'] },
-      { name: '淘宝首页设计', desc: '年终大促首页设计', 'img': '360-4.jpg', 'detailImg': '360-detail-4.jpg', rating: 5, tags: ['电商设计', 'C4D'] }
+    '360': [
+      { name: '淘宝首页设计', desc: '360车品旗舰店首页设计', img: '360-1-v2.jpg', detailImg: '360-detail-1.jpg', rating: 5, tags: ['电商设计'] },
+      { name: '淘宝首页设计', desc: '360车品旗舰店首页设计2', img: '360-2-v2.jpg', detailImg: '360-detail-2.jpg', rating: 5, tags: ['电商设计'] },
+      { name: '发布会推广设计', desc: '安全智见发布会物料设计', img: '360-3-v2.jpg', detailImg: '360-detail-3.jpg', rating: 5, tags: ['品牌视觉'] },
+      { name: '淘宝首页设计', desc: '年中大促首页设计', img: '360-4.jpg', detailImg: '360-detail-4.jpg', rating: 5, tags: ['电商设计', 'C4D'] },
     ],
-      songshu: [
-      { name: '双11主KV', desc: '大促主视觉', 'img': 'songshu-1-v2.jpg', 'detailImg': 'songshu-detail-1-v2.png', rating: 5, tags: ['电商设计'] },
-      { name: '日常主KV', desc: '大促主视觉', 'img': 'songshu-2-v2.jpg', 'detailImg': 'songshu-detail-2-v2.png', rating: 5, tags: ['电商设计', 'C4D'] },
-      { name: '详情设计', desc: '粽子详情设计', 'img': 'songshu-3-v2.png', 'detailImg': 'songshu-detail-3-v2.png', rating: 5, tags: ['详情页'] },
-      { name: '详情设计', desc: '碧根果详情设计', 'img': 'songshu-4-v2.jpg', 'detailImg': 'songshu-detail-4-v2.jpg', rating: 5, tags: ['详情页'] },
-      { name: '详情设计', desc: '豆腐详情设计', 'img': 'songshu-5-v2.jpg', 'detailImg': 'songshu-detail-5-v2.jpg', rating: 5, tags: ['详情页'] }
+    songshu: [
+      { name: '双11主KV', desc: '大促主视觉', rating: 5, tags: ['电商设计'] },
+      { name: '日常主KV', desc: '大促主视觉', img: 'songshu-2-v2.jpg', detailImg: 'songshu-detail-2-v2.png', rating: 5, tags: ['电商设计', 'C4D'] },
+      { name: '详情设计', desc: '粽子详情设计', img: 'songshu-3-v2.png', detailImg: 'songshu-detail-3-v2.png', rating: 5, tags: ['详情页'] },
+      { name: '详情设计', desc: '碧根果详情设计', img: 'songshu-4-v2.jpg', detailImg: 'songshu-detail-4-v2.jpg', rating: 5, tags: ['详情页'] },
+      { name: '详情设计', desc: '豆腐详情设计', img: 'songshu-5-v2.jpg', detailImg: 'songshu-detail-5-v2.jpg', rating: 5, tags: ['详情页'] },
     ],
-      aigc: [
-      { name: 'AI绘图作品1', desc: 'AI生成艺术设计', 'img': '', 'detailImg': '', rating: 5, tags: ['AI绘图', 'AIGC'] },
-      { name: 'AI绘图作品2', desc: 'AI辅助品牌设计', 'img': '', 'detailImg': '', rating: 5, tags: ['AI绘图', 'AIGC'] }
-    ]
+    aigc: [
+      { name: 'AI绘图作品1', desc: 'AI生成艺术设计', rating: 5, tags: ['AI绘图', 'AIGC'] },
+      { name: 'AI绘图作品2', desc: 'AI辅助品牌设计', rating: 5, tags: ['AI绘图', 'AIGC'] },
+    ],
   };
 
   // All unique tags from works
