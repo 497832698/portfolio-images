@@ -904,6 +904,7 @@
   };
 
   const BASE = 'https://cdn.jsdelivr.net/gh/497832698/portfolio-images@main/img';
+  var lazyObserver; // 懒加载 observer，在文件末尾的 observeImages() 中初始化
   const WORKS_DATA = {
       'haierwang': [
       {name: '详情设计', desc: '鳕鱼肠详情设计', img: 'haier-1.jpg', detailImg: 'haier-detail-1.jpg', rating: 5, tags: ['详情页', '食品']},
@@ -1392,8 +1393,6 @@
   });
 
   // ===== 懒加载：IntersectionObserver =====
-  let lazyObserver = null;
-
   function observeImages() {
     if (!lazyObserver) {
       lazyObserver = new IntersectionObserver((entries) => {
@@ -1411,16 +1410,15 @@
             lazyObserver.unobserve(el);
           }
         });
-      }, { rootMargin: '200px 0px' }); // 提前200px开始加载
+      }, { rootMargin: '200px 0px' });
     }
-
     document.querySelectorAll('.lazy-img[data-src], [data-bg]').forEach(el => {
       lazyObserver.observe(el);
     });
   }
 
-  // 初始化懒加载
-  observeImages();
+  // 页面加载完后对当前可见的图片做一次预观察
+  window.addEventListener('load', () => observeImages());
 
   // 8. 涟漪动画样式
   const style = document.createElement('style');
