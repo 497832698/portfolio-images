@@ -754,9 +754,9 @@
     </header>
 
     <div class="portfolio-header">
-      <div class="back-btn" onclick="navigate('home')">
+      <div class="back-btn" onclick="goBack()">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
-        返回首页
+        返回作品
       </div>
       <div class="portfolio-title" id="cat-title">作品分类</div>
       <div class="portfolio-count" id="cat-count">点击下方卡片查看详情</div>
@@ -827,9 +827,9 @@
       </div>
     </header>
     <div class="portfolio-header">
-      <div class="back-btn" onclick="navigate('home')">
+      <div class="back-btn" onclick="goBack()">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
-        返回首页
+        返回作品
       </div>
       <div class="portfolio-title" id="tag-title">标签作品</div>
     </div>
@@ -989,9 +989,12 @@
   let prevPage = 'home'; // track the actual previous page for detail return
   let sortInitialized = false; // whether sort buttons have been interacted with
 
+  let scrollPositions = {}; // track scroll position per page
+
   function navigate(page, category) {
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
     if (page === 'category') {
+      scrollPositions['home'] = window.scrollY;
       history.push('home');
       currentFilterTags = [];
       if (sortInitialized) updateSortButtons();
@@ -1004,6 +1007,7 @@
       prevPage = 'category';
       window.scrollTo(0, 0);
     } else if (page === 'tag') {
+      scrollPositions['home'] = window.scrollY;
       history.push('home');
       currentFilterTags = [category];
       currentFilterBrand = null;
@@ -1019,6 +1023,7 @@
     } else if (page === 'detail') {
       history.push(prevPage);
       document.getElementById('page-detail').classList.add('active');
+      window.scrollTo(0, 0);
     } else {
       history = [];
       document.getElementById('page-' + page).classList.add('active');
@@ -1029,6 +1034,12 @@
     const prev = history.pop() || 'home';
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
     document.getElementById('page-' + prev).classList.add('active');
+    // Restore scroll position when going back to home
+    if (prev === 'home' && scrollPositions['home'] !== undefined) {
+      window.scrollTo(0, scrollPositions['home']);
+    } else {
+      window.scrollTo(0, 0);
+    }
   }
 
   function renderCategoryFilter(category) {
