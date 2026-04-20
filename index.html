@@ -710,25 +710,25 @@
       <div class="work-grid">
         <div class="work-block wb-haierwang" onclick="navigate('category','haierwang')">
           <img class="wb-bg" src="" alt="" id="bg-haierwang">
-          <img src="https://raw.githubusercontent.com/497832698/portfolio-images/main/img/logo-haierwang-new.png" alt="孩子王" style="width:128px;height:80px;object-fit:contain;margin-bottom:8px;position:relative;z-index:1;">
+          <img src="https://cdn.jsdelivr.net/gh/497832698/portfolio-images@main/img/logo-haierwang-new.png" alt="孩子王" style="width:128px;height:80px;object-fit:contain;margin-bottom:8px;position:relative;z-index:1;">
           <div class="wb-name" style="position:relative;z-index:1;">孩子王</div>
           <div class="wb-count" style="position:relative;z-index:1;">设计作品</div>
         </div>
         <div class="work-block wb-360" onclick="navigate('category','360')">
           <img class="wb-bg" src="" alt="" id="bg-360">
-          <img src="https://raw.githubusercontent.com/497832698/portfolio-images/main/img/logo-360-new.png" alt="360" style="width:128px;height:56px;object-fit:contain;margin-bottom:8px;position:relative;z-index:1;">
+          <img src="https://cdn.jsdelivr.net/gh/497832698/portfolio-images@main/img/logo-360-new.png" alt="360" style="width:128px;height:56px;object-fit:contain;margin-bottom:8px;position:relative;z-index:1;">
           <div class="wb-name" style="position:relative;z-index:1;">360</div>
           <div class="wb-count" style="position:relative;z-index:1;">设计作品</div>
         </div>
         <div class="work-block wb-sansong" onclick="navigate('category','songshu')">
           <img class="wb-bg" src="" alt="" id="bg-songshu">
-          <img src="https://raw.githubusercontent.com/497832698/portfolio-images/main/img/logo-songshu-new.png" alt="三只松鼠" style="width:128px;height:80px;object-fit:contain;margin-bottom:8px;position:relative;z-index:1;">
+          <img src="https://cdn.jsdelivr.net/gh/497832698/portfolio-images@main/img/logo-songshu-new.png" alt="三只松鼠" style="width:128px;height:80px;object-fit:contain;margin-bottom:8px;position:relative;z-index:1;">
           <div class="wb-name" style="position:relative;z-index:1;">三只松鼠</div>
           <div class="wb-count" style="position:relative;z-index:1;">设计作品</div>
         </div>
         <div class="work-block wb-aigc" onclick="navigate('category','aigc')">
           <img class="wb-bg" src="" alt="" id="bg-aigc">
-          <img src="https://raw.githubusercontent.com/497832698/portfolio-images/main/img/logo-aigc-new.png" alt="AIGC" style="width:128px;height:80px;object-fit:contain;margin-bottom:8px;position:relative;z-index:1;">
+          <img src="https://cdn.jsdelivr.net/gh/497832698/portfolio-images@main/img/logo-aigc-new.png" alt="AIGC" style="width:128px;height:80px;object-fit:contain;margin-bottom:8px;position:relative;z-index:1;">
           <div class="wb-name">AIGC</div>
           <div class="wb-count">设计作品</div>
         </div>
@@ -903,7 +903,7 @@
       'aigc': {title: 'AIGC', count: 'AI 生成内容 · 探索与实践'}
   };
 
-  const BASE = 'https://raw.githubusercontent.com/497832698/portfolio-images/main/img';
+  const BASE = 'https://cdn.jsdelivr.net/gh/497832698/portfolio-images@main/img';
   const WORKS_DATA = {
       'haierwang': [
       {name: '详情设计', desc: '鳕鱼肠详情设计', img: 'haier-1.jpg', detailImg: 'haier-detail-1.jpg', rating: 5, tags: ['详情页', '食品']},
@@ -1279,7 +1279,7 @@
     const cards = document.querySelectorAll('.work-block');
     if (!cards.length) return;
     const bg = BG_IMAGES[Math.floor(Math.random() * BG_IMAGES.length)];
-    const bgUrl = 'https://raw.githubusercontent.com/497832698/portfolio-images/main/img/' + bg;
+    const bgUrl = 'https://cdn.jsdelivr.net/gh/497832698/portfolio-images@main/img/' + bg;
     cards.forEach(card => {
       card.style.background = `url(${bgUrl}) center/cover no-repeat`;
     });
